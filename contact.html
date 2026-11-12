@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="聯絡 NEXORA，討論網站、AI 應用與系統整合專案。">
+  <title>聯絡我們｜NEXORA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">N</span><span>NEXORA<span class="brand-dot">.</span></span></a>
+    <button class="menu-toggle" aria-label="開啟選單" aria-expanded="false">☰</button>
+    <nav class="nav-links"><a href="index.html">首頁 <small>HOME</small></a><a href="about.html">關於我們 <small>ABOUT</small></a><a class="active" href="contact.html">聯絡我們 <small>CONTACT</small></a></nav>
+    <a class="header-cta" href="#contact-form">填寫表單 <span>↘</span></a>
+  </header>
+  <main>
+    <section class="page-hero contact-hero container"><div class="eyebrow"><span class="pulse"></span> LET'S CONNECT / 01</div><h1>下一個好點子，<br><span class="gradient-text">從這裡開始。</span></h1><p>告訴我們你正在規劃的事。網站、AI、自動化或系統開發，都歡迎與我們交流。</p></section>
+    <section class="container contact-layout" id="contact-form">
+      <aside class="contact-aside"><div class="eyebrow">CONTACT CHANNEL / 02</div><h2>保持連線。</h2><p>填寫右側表單，我們收到後會透過電子郵件通知。請留下正確的聯絡方式。</p>
+        <div class="contact-detail"><span class="detail-icon">✉</span><div><small>EMAIL RESPONSE</small><strong>通常於 1–2 個工作日內回覆</strong></div></div>
+        <div class="contact-detail"><span class="detail-icon">⌖</span><div><small>PROJECT SCOPE</small><strong>網站・AI・自動化・系統整合</strong></div></div>
+        <div class="contact-coordinate">N 25°02' / E 121°33'<br>CONNECTED TO YOUR NEXT IDEA</div>
+      </aside>
+      <div class="form-panel">
+        <div class="form-topline"><span>PROJECT INQUIRY</span><span>FORM / 001</span></div>
+        <!-- 將 YOUR_GOOGLE_SCRIPT_WEB_APP_URL 替換成部署後的 Google Apps Script 網址 -->
+        <form id="inquiryForm" action="YOUR_GOOGLE_SCRIPT_WEB_APP_URL" method="POST" target="hidden_iframe">
+          <div class="form-row"><label>你的姓名 <span>NAME</span><input name="name" type="text" placeholder="如何稱呼你？" required maxlength="80"></label><label>電子郵件 <span>EMAIL</span><input name="email" type="email" placeholder="name@example.com" required maxlength="120"></label></div>
+          <label>聯絡主題 <span>SUBJECT</span><select name="subject" required><option value="" disabled selected>請選擇需求類型</option><option>網站設計與開發</option><option>AI 智慧應用</option><option>系統整合與自動化</option><option>企業合作 / 其他</option></select></label>
+          <label>預算範圍 <span>BUDGET / OPTIONAL</span><select name="budget"><option value="尚未確定">尚未確定</option><option>NT$ 30,000 以下</option><option>NT$ 30,000–100,000</option><option>NT$ 100,000–300,000</option><option>NT$ 300,000 以上</option></select></label>
+          <label>專案內容 <span>MESSAGE</span><textarea name="message" rows="5" placeholder="簡單描述你的目標、目前遇到的問題，或希望完成的功能……" required maxlength="5000"></textarea></label>
+          <!-- Honeypot 防垃圾欄位：正常使用者不會看到或填寫 -->
+          <div class="hp-field" aria-hidden="true"><label>Leave this field empty<input name="website" tabindex="-1" autocomplete="off"></label></div>
+          <label class="consent"><input type="checkbox" name="consent" value="同意" required><span>我同意將上述資料用於本次聯絡與需求回覆。</span></label>
+          <button class="button button-primary submit-button" type="submit"><span class="submit-label">送出訊息</span><span>↗</span></button>
+          <p class="form-note">資料僅用於回覆本次詢問。請勿在表單中填寫密碼或敏感個資。</p>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+        <iframe name="hidden_iframe" id="hidden_iframe" title="表單送出處理" class="hidden-frame"></iframe>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><a class="brand" href="index.html"><span class="brand-mark">N</span><span>NEXORA<span class="brand-dot">.</span></span></a><p>Design the next. Build what matters.</p><span>© 2026 NEXORA DIGITAL STUDIO</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
